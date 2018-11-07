@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="car" class="com.caps.dev.java.spring.xml.Car">
+		<constructor-arg name="color" value="Dirty Green"/>
+		<constructor-arg name="engine" ref="engine"/>
+		<constructor-arg name="name" value="Nano"/>
+	</bean>
+
+	<bean id="engine" class="com.caps.dev.java.spring.xml.Engine">
+		<property name="model" value="Snapdragon"/>
+		<property name="type" value="V8"></property>
+	</bean>
+</beans>
